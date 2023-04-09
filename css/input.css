@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#backimg{
+    background-image: url(../img/h1_hero1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

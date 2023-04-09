@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body class="h-screen">
+    <!-- This is the nav bar section -->
+    <div class="bg-slate-500 p-5">
+        <div class="flex items-center  sticky justify-between mx-auto max-w-7xl">
+            <a href="index.html" title="EpayHome Page" class="flex gap-2 items-center">
+                <i class="fa-solid fa-landmark w-[30%] h-[30%] text-green-400"></i>
+                <span class="font-semibold w-[80%] text-white">Epay</span>
+            </a>
+            <div class="flex items-center space-x-1">
+                <div class="hidden space-x-1 md:inline-flex">
+                <a href="index.html" class="btn btn-sm btn-link text-white">Home</a>
+                <a href="about.html" class="btn btn-sm btn-link text-white">About</a>
+                <a href="services.html" class="btn btn-sm btn-link text-white">Services</a>
+                <a href="blog.html" class="btn btn-sm btn-link text-white">Blog</a>
+                <a href="contact.html" class="btn btn-sm btn-link text-white">Contact</a>
+                </div>
+                <a href="#" class="btn btn-sm btn-primary bg-green-400">Apply For Loan</a>
+                <div class="inline-flex md:hidden" x-data="{ open: false }">
+                    <button class="flex-none px-2 btn btn-link btn-sm" @click="open = true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                            class="w-5 h-5">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <span class="sr-only">Open Menu</span>
+                    </button>
+                    <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow"
+                        x-show.transition="open" @click.away="open = false" x-cloak>
+                        <button class="self-end flex-none px-2 ml-2 btn btn-link btn-icon" @click="open = false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                            <span class="sr-only">Close Menu</span>
+                        </button>
+                        <a href="#" class="w-full btn btn-link">Home</a>
+                        <a href="#" class="w-full btn btn-link">About</a>
+                        <a href="#" class="w-full btn btn-link">Services</a>
+                        <a href="#" class="w-full btn btn-link">Blog</a>
+                        <a href="#" class="w-full btn btn-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- This is the footer div -->
+    <div class="bg-[#ccc]">
+        <footer class="px-4 py-12 mx-auto my-40  max-w-7xl">
+            <div class="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-12 lg:gap-20">
+                <div class="col-span-3">
+                    <a href="index.html" title="EpayHome Page" class="flex gap-2 items-center">
+                        <i class="fa-solid fa-landmark  h-[30%] text-green-400"></i>
+                        <span class="font-semibold   text-black">Epay</span>
+                    </a>
+                    <p class="my-4 text-xs leading-normal text-gray-500">
+                        Bring together your discussions, memberships, and content. Integrate a thriving community
+                        wherever your
+                        audience is, all under your own brand.
+                    </p>
+                    <label class="flex w-24">
+                        <span class="sr-only">Select a language</span>
+                        <select class="form-select form-select-sm">
+                            <option>English</option>
+                            <option>Spanish</option>
+                        </select>
+                    </label>
+                </div>
+                <nav class="col-span-1 md:col-span-1 lg:col-span-2">
+                    <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Product</p>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Features</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Integrations</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Documentation</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">FAQs</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Pricing</a>
+                </nav>
+                <nav class="col-span-1 md:col-span-1 lg:col-span-2">
+                    <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">About</p>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Press-Kit</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Company</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Privacy</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Blog</a>
+                </nav>
+                <nav class="col-span-2 md:col-span-1 lg:col-span-2">
+                    <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Contact</p>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Twitter</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Instagram</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Email</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Advertising</a>
+                    <a href="#"
+                        class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Chat</a>
+                </nav>
+                <div class="col-span-3">
+                    <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">SUBSCRIBE TO OUR
+                        NEWSLETTER</p>
+                    <form action="#" class="mb-2">
+                        <div class="form-append">
+                            <input class="form-input form-input-sm" type="email" placeholder="Enter your email" />
+                            <button class="btn btn-light-primary btn-sm bg-green-400 text-white"
+                                type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-xs leading-normal text-gray-500">Get lessons and insights on how to get loans</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
+                <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">© Copyright 2023 iamosita Dev. All Rights
+                    Reserved.
+                </p>
+                <div class="flex items-start justify-start space-x-6 md:items-center md:justify-center">
+                    <a href="#" class="text-sm text-gray-600 transition hover:text-primary">Terms</a>
+                    <a href="#" class="text-sm text-gray-600 transition hover:text-primary">Privacy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+</body>
+
+</html>
